@@ -19,12 +19,15 @@
     </style>
     <script>
      (function() {
+         let event_count = 0;
          const text_div = document.getElementById('text');
          window.addEventListener('keydown', (event) => {
-             text.innerHTML = "KEY " + JSON.stringify(event) + " " + event.key;
+             text.innerHTML = "KEY " + JSON.stringify(event) + " " + event.key + ` [${event_count}]`;
+             event_count += 1;
          });
          window.addEventListener('click', (event) => {
-             text.innerHTML = "MOUSE " + JSON.stringify(event) + event.x + " " + event.y;
+             text.innerHTML = "MOUSE " + JSON.stringify(event) + event.x + " " + event.y + ` [${event_count}]`;
+             event_count += 1;
          });
      })();
     </script>
