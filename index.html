@@ -5,5 +5,27 @@
     <body>
         <!-- <div style="background-image: url('https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png'); width: 970px;  height: 720px"></div>-->
         <div style="background-image: url('https://mathiasbynens.be/demo/animated-webp-supported.webp'); width: 400px;  height: 400px"></div>
+        <div id="text"></div>
     </body>
+    <style>
+     body {
+         background-color: #555;
+         color: white;
+     }
+     #text{
+         width: 500px;
+         height: 100px;
+     }
+    </style>
+    <script>
+     (function() {
+         const text_div = document.getElementById('text');
+         window.addEventListener('keydown', (event) => {
+             text.innerHTML = "KEY " + JSON.stringify(event) + " " + event.key;
+         });
+         window.addEventListener('click', (event) => {
+             text.innerHTML = "MOUSE " + JSON.stringify(event) + event.x + " " + event.y;
+         });
+     })();
+    </script>
 </html>
