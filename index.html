@@ -1,35 +1,23 @@
 <html>
     <head>
-        <title>Avuxo</title>
+        <title>htonl(10)</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!-- <div style="background-image: url('https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png'); width: 970px;  height: 720px"></div>-->
-        <div style="background-image: url('https://mathiasbynens.be/demo/animated-webp-supported.webp'); width: 400px;  height: 400px"></div>
-        <img src="https://mathiasbynens.be/demo/animated-webp-supported.webp"/>
-        <div id="text" onclick="window.location='page_two.html';"></div>
+        <div id="nav">
+            <h1>htonl(10)</h1>
+                <div id="navlinks">
+                    <a href="index.html">[HOME]</a>
+                    <a href="about.html">[ABOUT]</a>
+                </div>
+                <h4><i>Audio/video sync and sometimes other topics</i></h4>
+        </div>
+        <div id="textbody">
+            <h2>Blog</h2>
+            <p>Lorem ipsum blah blah blah</p>
+        </div>
+        <div id="footer">
+            <p><i>Hosted with Github Pages</i></p>
+        </div>
     </body>
-    <style>
-     body {
-         background-color: #555;
-         color: white;
-     }
-     #text{
-         width: 500px;
-         height: 100px;
-     }
-    </style>
-    <script>
-     (function() {
-         let event_count = 0;
-         const text_div = document.getElementById('text');
-         window.addEventListener('keydown', (event) => {
-             text.innerHTML = "KEY " + JSON.stringify(event) + " " + event.key + ` [${event_count}]`;
-             event_count += 1;
-         });
-         window.addEventListener('click', (event) => {
-             text.innerHTML = "MOUSE " + JSON.stringify(event) + event.x + " " + event.y + ` [${event_count}]`;
-             event_count += 1;
-         });
-     })();
-    </script>
 </html>
